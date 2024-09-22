@@ -1,7 +1,7 @@
 # L09HW_Cannonball
 Initial code for L09 HW. New features need to be added and changes to class structure.
 
-# Description
+## Description
 The Python code simulates the trajectory of a cannonball using a Cannonball class. It incorporates the following key components:
 
 Initialization: The __init__ method initializes the cannonball's position, velocity, and gravity.
