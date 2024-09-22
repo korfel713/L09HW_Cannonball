@@ -9,3 +9,6 @@ Movement: The move method updates the cannonball's position and velocity based o
 Position retrieval: The getX and getY methods return the current x and y positions, respectively.
 Shooting: The shoot method sets the initial velocity and angle of the cannonball and simulates its trajectory until it hits the ground.
 Visualization: The code uses Matplotlib to visualize the cannonball's path.
+
+## Important
+Need to pip install matplotlib
