@@ -47,10 +47,11 @@ class Cannonball:
         self.move(0.1, user_grav)
 
         while self.getY() > 1e-14:
-            print("The ball is at (%.1f, %.1f)" % (self.getX(), self.getY()))
+            # print("The ball is at (%.1f, %.1f)" % (self.getX(), self.getY()))
 
-            plt.scatter(self.getX(), self.getY())
-            plt.pause(.01)
+            # plt.scatter(self.getX(), self.getY())
+            # plt.pause(.01)
+            Print_Iface.print_iface()
             self.move(0.1, user_grav)
 
 class Crazyball(Cannonball):
@@ -60,7 +61,13 @@ class Crazyball(Cannonball):
         self.rand_q = random.randrange(0, 10)
         if self.getX():
             self._x = self._x + self.rand_q
-        
+
+class Print_Iface(Cannonball):
+
+    def print_iface(self):    
+        print("The ball is at (%.1f, %.1f)" % (Cannonball.getX(), Cannonball.getY()))
+        plt.scatter(Cannonball.getX(), Cannonball.getY())
+        plt.pause(.01)
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
