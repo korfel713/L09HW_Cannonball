@@ -78,8 +78,28 @@ if __name__ == '__main__':
 
     angle = float(input("Enter starting angle:"))
     v = float(input("Enter initial velocity:"))
-    c = Cannonball(0)
-    c.shoot(angle, v, 9.81)
+
+    print("1: Earth Gravity (normal Cannonball instance)")
+    print("2: Moon Gravity (modify gravity parameter to match that of the moon, use real value)")
+    print("3: Crazy Trajectory (use instance of Crazyball class; incorporate randomness)")
+    print("4: Quit (quit the program)")
+    done = False
+    while(done != True):
+        x = int(input("enter 1,2,3, or 4"))
+        if x == 1:
+            c = Cannonball(0)
+            c.shoot(angle, v, 9.81)
+        elif x == 2:
+            c = Cannonball(0)
+            c.shoot(angle, v, 1.625)
+        elif x == 3:
+            crazy_c = Crazyball(0)
+            crazy_c.shoot(angle, v, 9.81)
+        elif x == 4:
+            print("goodbye")
+            done == True
+        else:
+            print("please make sure to entire 1 through 4")
 
 
 
