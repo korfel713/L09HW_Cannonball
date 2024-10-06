@@ -53,7 +53,14 @@ class Cannonball:
             plt.pause(.01)
             self.move(0.1, user_grav)
 
+class Crazyball(Cannonball):
 
+    def move(self):
+
+        self.rand_q = random.randrange(0, 10)
+        if self.getX():
+            self._x = self._x + self.rand_q
+        
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
